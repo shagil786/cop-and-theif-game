@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import ChooseCop from "./components/ChooseCop/ChooseCop";
-import ChooseCity from "./components/ChooseCity/ChooseCity";
-import Result from "./components/Result/Result";
-import david from "./assets/david.png";
-import jane from "./assets/jane.png";
-import michael from "./assets/michael.png";
 import bike from "./assets/bike.png";
 import car from "./assets/car.png";
-import suv from "./assets/suv.png";
 import city_1 from "./assets/city_1.png";
 import city_2 from "./assets/city_2.png";
 import city_3 from "./assets/city_3.png";
 import city_4 from "./assets/city_4.png";
 import city_5 from "./assets/city_5.png";
+import david from "./assets/david.png";
+import jane from "./assets/jane.png";
+import michael from "./assets/michael.png";
+import suv from "./assets/suv.png";
+import About from "./components/About/About";
+import ChooseCity from "./components/ChooseCity/ChooseCity";
 import ChooseVechile from "./components/ChooseVechile/ChooseVechile";
+import Home from "./components/Home/Home";
+import Result from "./components/Result/Result";
 import { getCities, getVechiles } from "./utils/api";
 
 const App = () => {
@@ -70,7 +69,9 @@ const App = () => {
         });
         setVehicleData(res?.vechiles);
       })
-      .catch((err) => {});
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   useEffect(() => {
@@ -83,7 +84,9 @@ const App = () => {
         });
         setCityData(res?.cities);
       })
-      .catch((err) => {});
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Result.module.css";
 import { useNavigate } from "react-router-dom";
+import styles from "./Result.module.css";
 
 interface ResultProps {
   result: { copName: string; caputreStatus: boolean; message: string };

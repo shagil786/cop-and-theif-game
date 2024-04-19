@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./ChooseCop.module.css"; // Import module CSS
-import { useNavigate } from "react-router-dom";
 
 interface Cop {
   image: string;
@@ -19,8 +18,6 @@ const ChooseCop: React.FC<Props> = ({
   selectedCop,
   setSelectedCop,
 }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const navigate = useNavigate();
 
   const handleChooseCop = (index: number) => {
     setSelectedCop(index);
@@ -36,8 +33,6 @@ const ChooseCop: React.FC<Props> = ({
             className={`${styles.card} ${
               selectedCop === index ? styles.selectedCard : ""
             }`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
             onClick={() => handleChooseCop(index)}
           >
             <div style={{ width: "150px", height: "100%" }}>

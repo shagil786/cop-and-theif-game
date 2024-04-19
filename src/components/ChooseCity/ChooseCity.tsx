@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ChooseCity.module.css"; // Import module CSS
@@ -38,7 +37,6 @@ const ChooseCity: React.FC<Props> = ({
   setResult,
 }) => {
   const [hoveredIndexx, setHoveredIndexx] = useState<number | null>(null);
-  const [go, setGo] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
 
@@ -74,7 +72,7 @@ const ChooseCity: React.FC<Props> = ({
   };
 
   const validate = () => {
-    const finalResult = copData.filter((res, index) => {
+    const finalResult = copData.filter((res) => {
       return res.city && res?.vehicle;
     });
     return finalResult.length === 3;

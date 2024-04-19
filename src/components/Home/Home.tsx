@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styles from "./Home.module.css";
 import { useNavigate } from "react-router-dom";
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
-  const { container, drop } = styles;
+  const { container } = styles;
   const navigate = useNavigate();
 
   return (

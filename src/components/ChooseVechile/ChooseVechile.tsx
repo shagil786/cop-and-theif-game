@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "./ChooseVechile.module.css"; // Import module CSS
 import { useNavigate } from "react-router-dom";
 import ChooseCop from "../ChooseCop/ChooseCop";
+import styles from "./ChooseVechile.module.css"; // Import module CSS
 
 interface Cop {
   image: string;
