@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Pixelify Sans";
+}
+
+.container h2 {
+    color: #caf0f8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 5rem;
+}
+
+.container p {
+    color: white;
+    font-size: 2rem;
+}
+
+.container button {
+    color: #caf0f8;
+    font-size: 5rem;
+    background: #03045e;
+    border-style: none;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
